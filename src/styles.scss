@@ -1,1 +1,111 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/@angular/material/prebuilt-themes/purple-green.css';
+
+/* LOGIN FORM*/
+
+.mat-form-field-outline {
+//border: 1px solid lawngreen;
+}
+.mat-form-field-outline-start {
+	border: 1px solid red;
+}
+
+.mat-form-field-outline-gap{
+	border: 1px solid indigo;
+}
+
+.mat-form-field-outline-end{
+	border: 1px solid yellow;
+}
+
+/* Global Styles */
+
+:root {
+	--primary-color: #e50914;
+	--dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	
+}
+html, body { height: 100%; }
+body { margin: 0; 
+	font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//// TABS OF LANDING PAGE ///
+.tab-content .mat-tab-header {
+	background: var(--dark-color);
+	border-bottom: 5px solid #3d3d3d;
+	border-right: none;
+	margin: auto;
+	width: 100%;
+}
+
+.tab-content  .mat-tab-labels {
+	width: 80%;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin: auto;
+	grid-template-columns: 3fr;
+	text-align: center;
+	
+}
+.tabs {
+margin-top: 2em 0rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+	padding: 2em;
+	margin: auto;
+}
+.tab-content .mat-tab-body-wrapper {
+	margin-bottom: 3rem;
+}
+.mat-ink-bar {
+	border: 2px solid red;
+}
+
+.tabs i {
+font-size: 40px;
+}
+.tabs p {
+    font-size: 1.2rem;
+	padding-left: 1rem;
+	color:#999;
+}
+
+
+
+
+// .tab-content .mat-tab-body-wrapper {
+// 	//border: 3px solid orange;
+// }
+// .mat-tab-header-pagination {
+//     //display: none;
+// }
+// .mat-tab-content {
+//    //border: 30px solid green;
+// }
+// .mat-tab-list {
+// 	//border: 5px solid blue;
+// }
+// .mat-tab-nav-bar {
+// 	//border: 5px solid blue;
+// }
+// .tab-content  .mat-tab-label-container {
+// 	//border: 3px solid red;
+// }
+// .mat-tab-header, .mat-tab-nav-bar{
+// 	min-height: 70px;
+// 	margin: auto;
+// }

@@ -1,0 +1,59 @@
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+    <a class="navbar-brand" routerLink="/">
+      <img src="https://i.ibb.co/r5krrdz/logo.png" alt="" />
+    </a>
+    <button class="navbar-toggler" type="button"
+              data-toggle="collapse"
+              data-target="#navbarsExampleDefault"
+              aria-controls="navbarsExampleDefault"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+   </button> 
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-left">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/home">
+                Sign Up
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-left">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/register">
+                Sign Up
+            </a>
+          </li>
+        </ul>
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">
+                Sign In
+            </a>
+          </li>
+      </ul>
+      <ul class="navbar-nav">
+        <ng-template #anonymousUser>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login">Login</a>
+          </li>
+        </ng-template>
+        <li ngbDropdown placement="bottom-right"
+              class="d-inline-block"
+              class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="far fa-user-circle"></i>
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01" class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" routerLink="/profils">Manage profils</a>
+            <ng-container>
+              <a class="dropdown-item" routerLink="/account">My Account</a>
+              <a class="dropdown-item" routerLink="/profil">Helps center</a>
+            </ng-container>
+            <a class="dropdown-item" (click)="logout()">Log Out</a>
+          </div>
+        </li>
+      </ul>
+    </div> 
+</nav>

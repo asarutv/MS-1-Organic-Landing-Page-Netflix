@@ -1,0 +1,279 @@
+
+.landing{
+    padding-bottom: 3em;
+}
+
+.tabs {
+    // width: 100%;
+    // height: 150px;
+    // display: block;
+	// margin:0;
+	// z-index: 5;
+}
+
+
+.landing ul {
+	list-style: none;
+}
+
+.landing h1,
+.landing h2,
+.landing h3,
+.landing h4 {
+	color: #fff;
+}
+
+.landing a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.landing p {
+	margin: 0.5rem 0;
+}
+
+.landing img {
+	width: 100%;
+}
+
+
+// mat-ink-bar {           
+// 	&:before,
+// 	&:after {
+// 		content: "";
+// 		height: 2px;
+// 		width: 20px;
+// 		background-color: white;
+// 		position: absolute;
+// 		left: 0;
+// 	}
+// 	&:after {
+// 		left: initial;
+// 		right: 0;
+// 	}
+// }
+
+.tabs p {
+	// font-size: 1.2rem;
+	// padding-top: 0.5rem;
+	// color:#999;
+}
+.tabs:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+
+/////@extend
+// .tab-content[_ngcontent-hqn-c1] {
+//     padding: 0;
+//     background: #000;
+//     /* color: #524040; */
+//     color: #999;
+// }
+
+
+.tabs > div:hover {
+	color: #fff;
+	cursor: pointer;
+}
+
+/* Tab Content */
+.tab-content {
+	padding: 0;
+	background: #000;
+    color: #fff;
+   
+}
+.tab-content i {
+    font-size: 3.5sem;
+}
+
+.tab-1-content-inner {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 2rem;
+	align-items: center;
+    justify-content: center;
+    padding: 0em;
+	width: 80%;
+	margin: auto;
+}
+
+.tab-2-content-top {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-gap: 1rem;
+	justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.tab-2-content-bottom {
+	margin-top: 2em 0rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 2rem;
+    text-align: center;
+    padding: 2em;
+}
+
+/////////////////
+.landing .table {
+	width: 60%;
+	margin: auto;
+	border-collapse: collapse;
+    border-spacing: 0;
+    padding: 1em;
+}
+
+.landing .table thead th {
+	text-transform: uppercase;
+	padding: 0.8rem;
+	color: white;
+}
+
+.landing .table tbody {
+	display: table-row-group;
+	vertical-align: middle;
+	border-color: inherit;
+}
+
+.landing .table tbody tr td {
+	color: #999;
+	padding: 0.8rem 1.2rem;
+	text-align: center;
+}
+
+.landing .table tbody tr td:first-child {
+	text-align: left;
+}
+
+.landing .table tbody tr:nth-child(odd) {
+	background: #222;
+}
+
+/* Text Styles */
+.landing .text-xl {
+	font-size: 2rem;
+}
+
+.landing .text-lg {
+	font-size: 1.8rem;
+	margin-bottom: 1rem;
+}
+
+.landing .text-md {
+	margin-bottom: 1.5rem;
+	font-size: 1.2rem;
+}
+
+.landing .text-center {
+	text-align: center;
+}
+
+.landing .text-dark {
+	color: #999;
+}
+
+/* Buttons */
+.landing .btn {
+	display: inline-block;
+	background: var(--primary-color);
+	color: #fff;
+	padding: 0.4rem 1.3rem;
+	font-size: 1rem;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	margin-right: 0.5rem;
+	transition: opacity 0.2s ease-in;
+	outline: none;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+	border-radius: 2px;
+}
+
+.landing .btn:hover {
+	opacity: 0.9;
+}
+
+.landing .btn-rounded {
+border-radius: 5px;
+}
+
+.landing .btn-xl {
+	font-size: 2rem;
+	padding: 1.5rem 2.1rem;
+	text-transform: uppercase;
+}
+
+.landing .btn-icon {
+	margin-left: 1rem;
+	color:#999;
+
+}
+
+@media (max-width: 960px) {
+
+    .hide-sm {
+		display: none;
+    }
+    .landing .btn-xl {
+		font-size: 1.5rem;
+		padding: 1.4rem 2rem;
+		text-transform: uppercase;
+	}
+
+	.landing .text-xl {
+		font-size: 1.5rem;
+	}
+
+	.landing .text-lg {
+		font-size: 1.3rem;
+		margin-bottom: 1rem;
+	}
+
+    .landing .text-md {
+		margin-bottom: 1rem;
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 700px) {
+
+	.tabs i {
+		font-size: 40px;
+	}
+	.landing .table {
+		width: 85%;
+	}
+	.tab-1-content-inner {
+		grid-template-columns: 1fr;
+		text-align: center;
+		margin: auto;
+	}
+
+	.tab-2-content-top {
+		display: block;
+		margin: auto;
+		text-align: center;
+	}
+
+	.tab-2-content-bottom {
+		margin-top: 2rem;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 2rem;
+		text-align: center;
+	}
+
+	.landing .btn-xl {
+		font-size: 1rem;
+		padding: 1.2rem 1.6rem;
+		text-transform: uppercase;
+	}
+}
+
+@media(max-height: 600px) {
+
+}

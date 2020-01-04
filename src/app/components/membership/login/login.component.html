@@ -1,0 +1,58 @@
+
+  <div  class="row">
+    <div class="col-sm-3"></div>
+        
+        <div class="col-sm-6">
+        <br>
+    <form class="example-form">
+           <p>
+            <mat-form-field class="full-width" class="example-full-width" appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Email" [formControl]="emailFormControl"
+                    [errorStateMatcher]="matcher">
+            <mat-hint>Errors appear instantly!</mat-hint>
+            <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                Please enter a valid email address
+            </mat-error>
+            <mat-error *ngIf="emailFormControl.hasError('required')">
+                Email is <strong>required</strong>
+            </mat-error>
+            </mat-form-field>
+           
+            </p>
+            <!-- <p>
+                <mat-form-field appearance="outline">
+                  <mat-label>Outline form field</mat-label>
+                  <input matInput placeholder="Placeholder">
+                  <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                  <mat-hint>Hint</mat-hint>
+                </mat-form-field>
+              </p> -->
+
+        </form>
+       
+
+    </div>
+    <div class="col-sm-3"></div>
+
+
+  
+
+  <div formGroupName="matching_passwords">
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="Password" formControlName="password" required>
+      <mat-error *ngFor="let validation of account_validation_messages.password">
+        <mat-error class="error-message" *ngIf="accountDetailsForm.get('matching_passwords').get('password').hasError(validation.type) && (accountDetailsForm.get('matching_passwords').get('password').dirty || accountDetailsForm.get('matching_passwords').get('password').touched)">{{validation.message}}</mat-error>
+      </mat-error>
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="Confirm Password" formControlName="confirm_password"  [errorStateMatcher]="parentErrorStateMatcher" required>
+      <mat-error *ngFor="let validation of account_validation_messages.confirm_password">
+        <mat-error class="error-message" *ngIf="(accountDetailsForm.get('matching_passwords').get('confirm_password').hasError(validation.type)|| accountDetailsForm.get('matching_passwords').hasError(validation.type)) && (accountDetailsForm.get('matching_passwords').get('confirm_password').dirty || accountDetailsForm.get('matching_passwords').get('confirm_password').touched)">{{validation.message}}</mat-error>
+      </mat-error>
+    </mat-form-field>
+  
+  </div>
+
+</div>
